@@ -1,0 +1,20 @@
+<div class="demo">
+    <h2>Componant Directives :</h2>
+    <h2>NgStyle</h2>
+
+    <div [ngStyle]="currentStyles">Bonjour et bienvenue ! C'est bientôt le week-end ;)</div>
+
+    <div>
+
+        <button (click)="toggleItalic()">Italic</button>
+        <button (click)="toggleBold()">Bold</button>
+        <button (click)="toggleSize()">Size</button>
+
+    </div>
+
+    <h3>NgClass</h3>
+
+    <div [ngClass]="{ maClass : class }">Courage c'est vraiment bientôt le week-end</div>
+    <button (click)="toggleClass()">Class</button>
+
+</div>

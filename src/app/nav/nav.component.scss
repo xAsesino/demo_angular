@@ -1,0 +1,19 @@
+nav{
+    justify-content: center;
+    display: flex;
+}
+
+ul{
+    justify-content: center;
+    display: flex;
+}
+
+ul li{
+    list-style: none;
+    text-decoration: none;
+}
+
+ul li a{
+    margin: 5px;
+    text-transform: uppercase;
+}

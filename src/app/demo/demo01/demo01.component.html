@@ -1,0 +1,18 @@
+<div class="demo01">
+    <h3>Les Bindings</h3>
+    <h3>Property Binding</h3>
+    <h3>One-War Binding</h3>
+    <h3>{{maChaine}}</h3>
+    <h3>Two-Way Binding</h3>
+    <h3>My Name : {{myName}}</h3>
+    <input type="text" [(ngModel)]="myName" >
+    <h4>Event Binding</h4>
+
+    <div>Aujourd'hui je me sens {{myMood}}</div>
+    <button (click)="pasContent()">L'essence a augmenter de 20 cent</button>
+
+    <h4>Attribute Binding</h4>
+    <input type="text" [placeholder]="myPlaceHolder">
+    <button [disabled]="estCliquable">Clique ici</button>
+    <button (click)="toggleCliquable()">Toggle click</button>
+</div>

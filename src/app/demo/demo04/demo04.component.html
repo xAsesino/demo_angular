@@ -1,0 +1,27 @@
+<h2>Structural Directives</h2>
+<h3>NgIf</h3>
+
+<button (click)="toggleAffiche()">Afficher</button>
+<div *ngIf="affiche">Coucou Simon</div>
+
+<h3>NgFor</h3>
+
+<ul>
+
+    <li *ngFor="let bonjour of liste; let i = index">{{i+1}} - {{bonjour}}</li>
+
+</ul>
+
+<h3>NgSwitch</h3>
+
+<input type="text" [(ngModel)]="choix">
+
+<div [ngSwitch]="choix">
+
+    <div *ngSwitchCase="1">Vous avez choisi l'option 1</div>
+    <div *ngSwitchCase="2">Vous avez choisi l'option 2</div>
+    <div *ngSwitchCase="3">Vous avez choisi l'option 3</div>
+    <div *ngSwitchDefault>Vous êtes nuls!!!!!!!!!!</div>
+
+</div>
+

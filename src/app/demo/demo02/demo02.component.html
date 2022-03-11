@@ -1,0 +1,26 @@
+<div class="demo">
+    <h3>Les Pipes</h3>
+    <h3>Les Pipes déjà existants : </h3>
+
+    <p>Ma chaine de caracères avant les Pipes : {{maChaine}}</p>
+    <p>UPPERCASE : {{maChaine | uppercase }}</p>
+    <p>lowercase : {{maChaine | lowercase }}</p>
+    <!-- Première lettre en Maj -->
+    <p>Titlecase : {{maChaine | titlecase }}</p>
+    <p>Mon nombre avant Pipe : {{monNombre}}</p>
+    <!-- 1.1-3 => Par défaut || .1-2 => 1 à 2 nombres après la virgules -->
+    <!-- 1. => valeur max entière -->
+    <p>Pipe nombre : {{ monNombre | number : '1.1-2' }} </p>
+    <p>Pipe nombre : {{ monNombre | number : '2.1-3' }} </p>
+
+    <p>La date avant Pipe : {{ dateDuJour | date : 'dd-MM-yyyy' }}</p>
+    <p>La date avant Pipe : {{ dateDuJour | date : 'dd/MM/yyyy' }}</p>
+    <p>La date avant Pipe : {{ dateDuJour | date : 'dd MMMM yyyy' }}</p>
+
+    <h3>Exemple Pipe Custom : </h3>
+
+    <p>Ma température : {{ maTemp }} °C</p>
+    <p>Ma température convertie : {{ maTemp | toFahrenheit }} °F</p>
+
+
+</div>
