@@ -1,0 +1,19 @@
+<span>
+
+    <input type="text" [(ngModel)]="choice" placeholder="prefixes">
+
+    <input type="text" [(ngModel)]="myNumber" placeholder="myNumber">
+
+    <p>{{choice}}{{myNumber | numbers}}</p>
+
+    <ul *ngFor="let numbers of prefixes">
+
+        <li *ngIf="numbers.prefixe == choice">
+
+            {{numbers.country}}
+
+        </li>
+
+    </ul>
+
+</span>

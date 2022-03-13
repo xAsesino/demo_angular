@@ -1,7 +1,8 @@
 <div class="exo">
     <h3>{{title}}</h3>
-    <p>{{chronoMin | convertSeconds }}</p>
+    <p>{{chrono | convertSeconds }}</p>
     <button (click)="toggleStart()" [disabled]="timer">Start</button>
     <button (click)="togglePause()" [disabled]="!timer">Pause</button>
-    <button (click)="toggleReset()" [disabled]="chronoMin == 0">Reset</button>
+    <button (click)="toggleReset()" [disabled]="chrono == 0">Reset</button>
+    
 </div>

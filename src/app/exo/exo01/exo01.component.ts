@@ -9,7 +9,7 @@ export class Exo01Component implements OnInit {
 
   title: string = "Chronométre";
 
-  chronoMin: number = 0;
+  chrono: number = 0;
   chronoSec: number = 0;
 
   timer : any
@@ -20,7 +20,7 @@ export class Exo01Component implements OnInit {
   }
 
   toggleStart() {
-    this.timer = setInterval( () => {this.chronoMin++}, 1000);
+    this.timer = setInterval( () => {this.chrono++}, 1000);
   }
 
   togglePause(){
@@ -30,7 +30,7 @@ export class Exo01Component implements OnInit {
 
   toggleReset(){
     this.togglePause();
-    this.chronoMin = 0;
+    this.chrono = 0;
   }
 
   // My VERSION // 
