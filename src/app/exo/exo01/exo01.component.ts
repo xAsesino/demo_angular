@@ -1,13 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-exo01',
   templateUrl: './exo01.component.html',
   styleUrls: ['./exo01.component.scss']
 })
-export class Exo01Component implements OnInit {
+
+export class Exo01Component implements OnInit, OnDestroy {
 
   title: string = "Chronométre";
+
+  // test! : number ; => Permet d'être initialiser par après
+  // test? : number ; => Peut être undefined
 
   chrono: number = 0;
   chronoSec: number = 0;
@@ -15,6 +19,10 @@ export class Exo01Component implements OnInit {
   timer : any
 
   constructor() { }
+
+  ngOnDestroy(): void {
+    // alert('Hello world!')
+  }
 
   ngOnInit(): void {
   }

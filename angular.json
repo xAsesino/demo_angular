@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular_demo": {
+    "DemoAngular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular_demo",
+            "outputPath": "dist/demo-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular_demo:build:production"
+              "browserTarget": "DemoAngular:build:production"
             },
             "development": {
-              "browserTarget": "angular_demo:build:development"
+              "browserTarget": "DemoAngular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular_demo:build"
+            "browserTarget": "DemoAngular:build"
           }
         },
         "test": {
@@ -107,5 +110,5 @@
       }
     }
   },
-  "defaultProject": "angular_demo"
+  "defaultProject": "DemoAngular"
 }

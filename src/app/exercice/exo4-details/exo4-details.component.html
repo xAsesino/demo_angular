@@ -1,0 +1,13 @@
+
+<a routerLink="/exercice/exo4-lists">Un petit retour en arrière ?</a>
+
+<h1>{{message}}</h1>
+
+{{moreDetails.lastname}}
+{{moreDetails.firstname}}
+{{moreDetails.birthdate}}
+<div *ngFor="let serie of moreDetails.series">
+
+    {{serie.name}}
+
+</div>

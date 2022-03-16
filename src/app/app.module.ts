@@ -1,28 +1,32 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DemoRoutingModule } from './demo/demo-routing.module';
-import { Demo01RoutingModule } from './demo/demo01/demo01-routing.module';
-import { ExoRoutingModule } from './exo/exo-routing.module';
+import { ExerciceRoutingModule } from './exercice/exercice-routing.module';
 import { NavComponent } from './nav/nav.component';
-import { NumbersPipe } from './pipes/numbers.pipe';
-
+import { ConvertSecondsPipe } from './pipes/convert-seconds.pipe';
+import { SharedModule } from './shared/shared.module';
+import { AccueilComponent } from './accueil/accueil.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
-  ],
+    NavComponent,
+    AccueilComponent,
+    NotFoundComponent,
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ExoRoutingModule,
     DemoRoutingModule,
-    Demo01RoutingModule
+    ExerciceRoutingModule,
+    SharedModule
   ],
+  exports : [],
   providers: [],
   bootstrap: [AppComponent]
 })

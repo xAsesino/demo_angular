@@ -1,0 +1,23 @@
+<h1>Listes des Fans :</h1>
+
+<app-exo4-add></app-exo4-add>
+
+<ul *ngIf="fansLists && fansLists.length > 0">
+    <li *ngFor="let fans of fansLists; let i = index">
+
+        {{fans.lastname}} x {{fans.firstname}} x {{fans.birthdate}}
+
+        <ul>
+            <li *ngFor="let serie of fans.series">
+
+                {{serie.name}}
+
+            </li>
+        </ul>
+
+        <input type="button" value="🚮" (click)="delFans(i)">
+        <input type="button" value="👨‍💻">
+        <input type="button" value="➕➕" [routerLink]="'/exercice/exo4-details/'+i">
+
+    </li>
+</ul>

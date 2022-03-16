@@ -1,25 +1,36 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ToFahrenheitPipe } from '../pipes/to-fahrenheit.pipe';
-import { ConvertSecondPipe } from '../pipes/convert-second.pipe';
-import { DemoPipe } from '../pipes/demo.pipe';
-import { NumbersPipe } from '../pipes/numbers.pipe';
+import { ConvertSecondsPipe } from '../pipes/convert-seconds.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HighligthDirective } from './directives/highligth.directive';
+import { SamEverywhereDirective } from './directives/sam-everywhere.directive';
+import { ToggleInvisibleDirective } from './directives/toggle-invisible.directive';
+
+
 
 @NgModule({
   declarations: [
     ToFahrenheitPipe,
-    ConvertSecondPipe,
-    DemoPipe,
-    NumbersPipe
+    ConvertSecondsPipe,
+    HighligthDirective,
+    SamEverywhereDirective,
+    ToggleInvisibleDirective
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  exports: [
+  exports : [
     ToFahrenheitPipe,
-    ConvertSecondPipe,
-    DemoPipe,
-    NumbersPipe
+    ConvertSecondsPipe,
+    FormsModule,
+    HighligthDirective,
+    SamEverywhereDirective,
+    ToggleInvisibleDirective,
+    ReactiveFormsModule
   ]
+
 })
 export class SharedModule { }
